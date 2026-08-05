@@ -1,0 +1,46 @@
+{
+  "source": "http://xhslink.cn/o/19VMletlEI5",
+  "final_url": "https://www.xiaohongshu.com/discovery/item/6a6eaf1e00000000250052b1?app_platform=android&ignoreEngage=true&app_version=9.40.0&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBzsGUtchwWCZxBxFKEuEw_LUK-q2jbSAishCPyndU3MI%3D&author_share=1&xhsshare=CopyLink&shareRedId=N0dFMTU3ND83OEdHOjg1PDo3OjpFPEg7&apptime=1785896585&share_id=e1dfda654c254a47b15065b5424f8485&share_channel=copy_link",
+  "image_urls": 5,
+  "downloaded_images": 5,
+  "records": [
+    {
+      "order": 1,
+      "url": "http://sns-webpic-qc.xhscdn.com/202608051318/02146d1bcc0ae36a4c484abd5ecb2a91/notes_pre_post/1040g3k0323bp0b6unk005qefa5osj5lisdp402o!nd_dft_wlteh_jpg_3",
+      "path": "01.jpg",
+      "bytes": 77505
+    },
+    {
+      "order": 2,
+      "url": "http://sns-webpic-qc.xhscdn.com/202608051318/f9b6bf4716ec06ee09fe6e86255806cd/notes_pre_post/1040g3k0323bp0b6unk0g5qefa5osj5li4fgu0c0!nd_dft_wlteh_jpg_3",
+      "path": "02.jpg",
+      "bytes": 304800
+    },
+    {
+      "order": 3,
+      "url": "http://sns-webpic-qc.xhscdn.com/202608051318/ae4c4d6806bf17d4b3ee7d0177926d60/notes_pre_post/1040g3k0323bp0b6unk105qefa5osj5li66rbap0!nd_dft_wlteh_jpg_3",
+      "path": "03.jpg",
+      "bytes": 265007
+    },
+    {
+      "order": 4,
+      "url": "http://sns-webpic-qc.xhscdn.com/202608051318/775d558c1e4860d7ca24b7d43d13a4bf/notes_pre_post/1040g3k0323bp0b6unk1g5qefa5osj5lil1hv6t8!nd_dft_wlteh_jpg_3",
+      "path": "04.jpg",
+      "bytes": 271074
+    },
+    {
+      "order": 5,
+      "url": "http://sns-webpic-qc.xhscdn.com/202608051318/48db8aaac882690171b6ad94bbf62cbe/notes_pre_post/1040g3k0323bp0b6unk205qefa5osj5lir9ct8eg!nd_dft_wlteh_jpg_3",
+      "path": "05.jpg",
+      "bytes": 182913
+    }
+  ],
+  "diagnostics": [
+    {
+      "source": "xiaohongshu_page",
+      "status": 200,
+      "final_url": "https://www.xiaohongshu.com/discovery/item/6a6eaf1e00000000250052b1?app_platform=android&ignoreEngage=true&app_version=9.40.0&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBzsGUtchwWCZxBxFKEuEw_LUK-q2jbSAishCPyndU3MI%3D&author_share=1&xhsshare=CopyLink&shareRedId=N0dFMTU3ND83OEdHOjg1PDo3OjpFPEg7&apptime=1785896585&share_id=e1dfda654c254a47b15065b5424f8485&share_channel=copy_link",
+      "bytes": 741222
+    }
+  ]
+}
