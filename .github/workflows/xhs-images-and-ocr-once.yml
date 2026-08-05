@@ -1,0 +1,30 @@
+name: XHS Images And OCR Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/xhs-images-and-ocr-once.yml
+      - scripts/xhs_images_and_ocr_once.py
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests beautifulsoup4 lxml rapidocr_onnxruntime
+      - run: python scripts/xhs_images_and_ocr_once.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add xhs-image-export
+          git commit -m "Add Xiaohongshu image export" || exit 0
+          git push origin HEAD:main
