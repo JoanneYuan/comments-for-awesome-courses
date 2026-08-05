@@ -1,0 +1,32 @@
+name: XHS ZIP Chunks Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/xhs-zip-chunks-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Split ZIP into text chunks
+        shell: bash
+        run: |
+          rm -rf xhs-image-export/chunks
+          mkdir -p xhs-image-export/chunks
+          base64 -w 0 'xhs-image-export/小红书图片.zip' | split -b 80000 -d -a 3 - xhs-image-export/chunks/part_
+          find xhs-image-export/chunks -type f -printf '%f\n' | sort > xhs-image-export/chunks/index.txt
+      - name: Commit chunks
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add xhs-image-export/chunks
+          git commit -m 'Add temporary Xiaohongshu ZIP chunks' || exit 0
+          git push origin HEAD:main
