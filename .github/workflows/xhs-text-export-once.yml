@@ -1,0 +1,30 @@
+name: XHS Text Export Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/xhs-text-export-once.yml
+      - scripts/xhs_text_export_once.py
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests rapidocr_onnxruntime
+      - run: python scripts/xhs_text_export_once.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add xhs-text-export
+          git commit -m "Add Xiaohongshu text export" || exit 0
+          git push origin HEAD:main
